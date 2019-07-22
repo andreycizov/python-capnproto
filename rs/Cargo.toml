@@ -1,0 +1,22 @@
+[package]
+name = "python_capnproto"
+version = "0.1.0"
+authors = ["Andrey Cizov <acizov@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+capnp = "0.10.0"
+capnpc = "0.10.0"
+owning_ref = "0.3"
+itertools = "0.8.0"
+
+[dependencies.pyo3]
+path = "../..//pyo3"
+#version = "0.7.0"
+features = ["extension-module"]
+
+[lib]
+name = "python_capnproto"
+crate-type = ["cdylib"]
